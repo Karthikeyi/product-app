@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emailClient" class="com.srkr.EmailClinet">  
+		<constructor-arg name="spellChecker" ref="AdvanceSpell"></constructor-arg>
+	</bean>
+
+	<bean id="basicSpell" class="com.srkr.BasicSpellChecker">
+	</bean>
+	<bean id="AdvanceSpell" class="com.srkr.AdvancedSpellChecker">
+	</bean>
+	<bean id="ProSpell" class="com.srkr.ProSpellChecker">
+	</bean>
+	
+
+	<!-- more bean definitions go here -->
+
+</beans>
